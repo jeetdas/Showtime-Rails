@@ -1,0 +1,21 @@
+<h1>Welcome to Showtime!</h1>
+<p>How cool is this?</p>
+
+<h1>Searching for - <%= @page_number %></h1>
+
+<table border="1">
+  <tr>
+  	<th>Index</th>
+  	<th>Title</th>
+  	<th>Vote Count</th>
+  	<th>Description</th>
+  </tr>
+  <% @results.each_with_index do |result, index| %>
+    <tr>
+      <td><%= "#{index+1}" %></td>
+      <td><%= result["title"] %></td>
+      <td><%= result["vote_count"] %></td>
+      <td><%= result["overview"] %></td>
+    </tr>
+  <% end %>
+</table>
