@@ -7,14 +7,14 @@
   <tr>
   	<th>Index</th>
   	<th>Title</th>
-  	<th>Vote Count</th>
+  	<th>Poster</th>
   	<th>Description</th>
   </tr>
   <% @results.each_with_index do |result, index| %>
     <tr>
       <td><%= "#{index+1}" %></td>
       <td><%= result["title"] %></td>
-      <td><%= result["vote_count"] %></td>
+      <td><%= image_tag "https://image.tmdb.org/t/p/w342" + result["poster_path"]%></td>
       <td><%= result["overview"] %></td>
     </tr>
   <% end %>

@@ -1,6 +1,6 @@
 class HomepageController < ApplicationController
   def index
-  	@page_number = 1
-  	@results = TMDB.for 1, 2, 3 
+  	@page_number = params[:page] || 1
+  	@results = TMDB_Discover_Movie.for @page_number
   end
 end

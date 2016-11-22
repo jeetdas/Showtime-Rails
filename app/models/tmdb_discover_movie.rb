@@ -1,4 +1,4 @@
-class TMDB
+class TMDB_Discover_Movie
 	include HTTParty
 
 	base_uri 'https://api.themoviedb.org/3/discover/movie'
